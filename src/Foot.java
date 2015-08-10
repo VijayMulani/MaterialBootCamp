@@ -35,4 +35,9 @@ public class Foot extends Unit {
 	public String toString() {
 		return "Foot [value=" + value + "]";
 	}
+	
+	public Foot add(Unit unit)
+	{
+		return new Foot(value+unit.getCentimeterLength()/FOOT_TO_CENTIMETER);
+	}
 }

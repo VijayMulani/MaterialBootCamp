@@ -35,4 +35,9 @@ public class Yard extends Unit{
 			return false;
 		return true;
 	}
+	
+	public Yard add(Unit unit)
+	{
+		return new Yard(value+unit.getCentimeterLength()/YARD_TO_CENTIMETER);
+	}
 }

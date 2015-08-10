@@ -42,4 +42,8 @@ public class Meter extends Unit{
 	{
 		return new Meter(unit.getCentimeterLength()/METER_TO_CENTIMETER);
 	}
+	public Meter add(Unit unit)
+	{
+		return new Meter(value+unit.getCentimeterLength()/METER_TO_CENTIMETER);
+	}
 }

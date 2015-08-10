@@ -16,7 +16,7 @@ public class MaterialTest {
 	{
 		Centimeter cm=new Centimeter(100);
 		Meter meter=new Meter(1);
-		Assert.assertTrue(Material.isCentimeterEqualToMeter(cm, meter));
+		Assert.assertTrue(cm.unitEquals(meter));
 	}
 	@Test
 	public void testWhetherCentimeterNotEqualsMeter()
@@ -53,6 +53,23 @@ public class MaterialTest {
 		Inch inch=new Inch(100);
 		Meter meter=new Meter(2.54);
 		Assert.assertTrue(inch.unitEquals(meter));
+	}
+	@Test
+	public void addInchToCentimeter()
+	{
+		Inch inch=new Inch(10.9);
+		Centimeter cm=new Centimeter(109);
+		//Centimeter addition=new Centimeter(353);
+		Centimeter addition=cm.add(inch);
+		Assert.assertEquals(136.686,addition.getCentimeterLength());
+	}
+	@Test
+	public void addCentimeterToMeter()
+	{
+		Centimeter cm=new Centimeter(10);
+		Meter meter=new Meter(100);
+		Meter addition=meter.add(cm);
+		Assert.assertEquals(100.1, addition.getValue());
 	}
 
 }

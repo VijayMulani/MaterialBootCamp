@@ -20,4 +20,7 @@ public class Centimeter extends Unit{
 	public double getCentimeterLength() {
 		return value;
 	}
+	public Centimeter add(Unit unit) {
+		return new Centimeter(this.getCentimeterLength()+unit.getCentimeterLength());
+	}
 }
