@@ -1,4 +1,3 @@
-
 public class Meter extends Unit{
 
 	@Override
@@ -42,8 +41,18 @@ public class Meter extends Unit{
 	{
 		return new Meter(unit.getCentimeterLength()/METER_TO_CENTIMETER);
 	}
-	public Meter add(Unit unit)
+/*	public Meter add(Unit unit)
 	{
 		return new Meter(value+unit.getCentimeterLength()/METER_TO_CENTIMETER);
+	}*/
+	@Override
+	public double getConversionFactor() {
+		// TODO Auto-generated method stub
+		return METER_TO_CENTIMETER;
+	}
+	@Override
+	public Unit clone(double value) {
+		
+		return new Meter(value);
 	}
 }

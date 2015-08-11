@@ -60,7 +60,7 @@ public class MaterialTest {
 		Inch inch=new Inch(10.9);
 		Centimeter cm=new Centimeter(109);
 		//Centimeter addition=new Centimeter(353);
-		Centimeter addition=cm.add(inch);
+		Centimeter addition=(Centimeter)cm.add(inch);
 		Assert.assertEquals(136.686,addition.getCentimeterLength());
 	}
 	@Test
@@ -68,7 +68,7 @@ public class MaterialTest {
 	{
 		Centimeter cm=new Centimeter(10);
 		Meter meter=new Meter(100);
-		Meter addition=meter.add(cm);
+		Meter addition=(Meter)meter.add(cm);
 		Assert.assertEquals(100.1, addition.getValue());
 	}
 

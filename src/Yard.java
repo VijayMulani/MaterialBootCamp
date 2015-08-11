@@ -35,9 +35,20 @@ public class Yard extends Unit{
 			return false;
 		return true;
 	}
+	@Override
+	public double getConversionFactor() {
+		
+		return YARD_TO_CENTIMETER;
+	}
+	@Override
+	public Unit clone(double value) {
+		// TODO Auto-generated method stub
+		return new Yard(value);
+	}
 	
-	public Yard add(Unit unit)
+/*	public Yard add(Unit unit)
 	{
 		return new Yard(value+unit.getCentimeterLength()/YARD_TO_CENTIMETER);
-	}
+	}*/
+	
 }

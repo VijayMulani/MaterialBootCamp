@@ -36,8 +36,18 @@ public class Inch extends Unit{
 	{
 		return new Inch(unit.getCentimeterLength()/INCH_TO_CENTIMETER);
 	}
-	public Inch add(Unit unit)
+/*	public Inch add(Unit unit)
 	{
 		return new Inch(value+unit.getCentimeterLength()/INCH_TO_CENTIMETER);
+	}*/
+	@Override
+	public double getConversionFactor() {
+		// TODO Auto-generated method stub
+		return INCH_TO_CENTIMETER;
+	}
+	@Override
+	public Unit clone(double value) {
+		// TODO Auto-generated method stub
+		return new Inch(value);
 	}
 }

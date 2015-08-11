@@ -20,7 +20,17 @@ public class Centimeter extends Unit{
 	public double getCentimeterLength() {
 		return value;
 	}
-	public Centimeter add(Unit unit) {
+/*	public Centimeter add(Unit unit) {
 		return new Centimeter(this.getCentimeterLength()+unit.getCentimeterLength());
+	}*/
+	@Override
+	public double getConversionFactor() {
+		
+		return 1;
+	}
+	@Override
+	public Unit clone(double value) {
+		// TODO Auto-generated method stub
+		return new Centimeter(value);
 	}
 }

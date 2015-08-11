@@ -35,9 +35,21 @@ public class Foot extends Unit {
 	public String toString() {
 		return "Foot [value=" + value + "]";
 	}
+
+	@Override
+	public double getConversionFactor() {
+		// TODO Auto-generated method stub
+		return FOOT_TO_CENTIMETER;
+	}
+
+	@Override
+	public Unit clone(double value) {
+		// TODO Auto-generated method stub
+		return new Foot(value);
+	}
 	
-	public Foot add(Unit unit)
+/*	public Foot add(Unit unit)
 	{
 		return new Foot(value+unit.getCentimeterLength()/FOOT_TO_CENTIMETER);
-	}
+	}*/
 }
